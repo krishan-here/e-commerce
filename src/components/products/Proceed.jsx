@@ -4,9 +4,19 @@ import Order from "./Order";
 function Proceed(props) {
   return (
     <div>
-      <Order />
-      <Order />
-      <Order />
+      {props.orders.map((order) => {
+        return (
+          <Order
+            key={order.id}
+            id={order.id}
+            image={order.image}
+            title={order.title}
+            price={order.price}
+            removeOrder={props.removeOrder}
+          />
+        );
+      })}
+
       <div className="proceed">
         <div>
           <h4>$ 1000</h4>

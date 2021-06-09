@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+function Header(props) {
   return (
     <div className="custom-header">
-      <div>Amezo</div>
+      <div onClick={props.goHome} className="amezo">
+        Amezo
+      </div>
       <div className="user-info">
         <div>sign in</div>
         <div className="cart">

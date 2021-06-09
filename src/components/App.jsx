@@ -9,10 +9,13 @@ function App() {
   function handleChange() {
     setShowFeature(false);
   }
+  function goHome() {
+    setShowFeature(true);
+  }
 
   return (
     <>
-      <Header />
+      <Header goHome={goHome} />
       {showFeature && <Feature />}
       <Card showProduct={handleChange} showCards={showFeature} />
     </>
