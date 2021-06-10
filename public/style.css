@@ -154,6 +154,17 @@ a:hover{
 
 /* item section  */
 
+.card{
+    width: 18rem;
+    margin-bottom: 10px;
+}
+.card img{
+    height: 300px;
+}
+.card .card-body{
+    height: 100px;
+}
+
 .price-cart{
     display: flex;
     justify-content: space-around;
@@ -182,6 +193,13 @@ a:hover{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.deleteIcon{
+    color:rgb(255, 196, 0);
+    cursor: pointer;
+}
+.deleteIcon:hover{
+    color: rgb(255, 136, 0);
 }
 
 .proceed{

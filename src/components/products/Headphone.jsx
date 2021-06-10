@@ -7,9 +7,20 @@ function Headphone() {
   const [orders, setOrders] = useState([]);
 
   function addOrder(newOrder) {
-    setOrders((prev) => {
-      return [...prev, newOrder];
+    let isAlreadyPresent = false;
+    let newOrders = [...orders];
+    newOrders.forEach((order) => {
+      if (order.id == newOrder.id) {
+        //already present in the cart
+        isAlreadyPresent = true;
+        order.count++;
+      }
     });
+    if (!isAlreadyPresent) {
+      //add new order
+      newOrders.push({ ...newOrder, count: 1 });
+    }
+    setOrders(newOrders);
   }
   function removeOrder(order_id) {
     setOrders((prev) => {

@@ -11,14 +11,9 @@ function Item(props) {
   };
 
   return (
-    <div className="card" style={{ width: "18rem", marginBottom: "10px" }}>
-      <img
-        className="card-img-top"
-        src={props.img}
-        alt={props.title}
-        style={{ height: "300px" }}
-      />
-      <div className="card-body" style={{ height: "100px" }}>
+    <div className="card">
+      <img className="card-img-top" src={props.img} alt={props.title} />
+      <div className="card-body">
         <h5 className="card-title">{concate(props.title)}</h5>
       </div>
       <div className="card-body price-cart">
