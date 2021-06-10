@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Headphone from "./products/Headphone";
+import Computer from "./products/Computer";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 function Card(props) {
@@ -12,7 +13,17 @@ function Card(props) {
             <div className="custom-card computer-card">
               <div className="show">
                 <div>Computer</div>
-                <button className="btn btn-lg btn-warning">Shop</button>
+                <Link to="/computer">
+                  <button
+                    className="btn btn-warning"
+                    onClick={props.showProduct}
+                  >
+                    <div>Shop</div>
+                    <div className="arrow">
+                      <ArrowForwardIcon />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -46,8 +57,10 @@ function Card(props) {
       ) : (
         <Switch>
           <Route path="/headphone">
-            {" "}
             <Headphone />
+          </Route>
+          <Route path="/computer">
+            <Computer />
           </Route>
         </Switch>
       )}

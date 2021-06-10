@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import items from "../productsData/headphone";
+import items from "../productsData/computer";
 import Item from "./Item";
 import Proceed from "./Proceed";
 
-function Headphone() {
+function Computer() {
   const [orders, setOrders] = useState(
     JSON.parse(localStorage.getItem("orders"))
       ? JSON.parse(localStorage.getItem("orders"))
@@ -63,4 +63,4 @@ function Headphone() {
   );
 }
 
-export default Headphone;
+export default Computer;

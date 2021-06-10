@@ -12,9 +12,11 @@ function Item(props) {
 
   return (
     <div className="card">
-      <img className="card-img-top" src={props.img} alt={props.title} />
+      <div className="img">
+        <img className="card-img-top" src={props.img} alt={props.title} />
+      </div>
       <div className="card-body">
-        <h5 className="card-title">{concate(props.title)}</h5>
+        <h5 className="card-title">{concate(props.title, 50)}</h5>
       </div>
       <div className="card-body price-cart">
         <h4 className="card-text">{priceSymbol(props.price)}</h4>

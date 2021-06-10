@@ -5,18 +5,18 @@ import DeleteIcon from "@material-ui/icons/Delete";
 
 function Order(props) {
   return (
-    <div className="order-section">
-      <div className="order-img">
+    <div className="order-section row">
+      <div className="order-img col-4">
         <img src={props.order.image} alt={props.order.title} />
       </div>
-      <div>
+      <div className="col-8">
         <div className="title">
-          <p>{concate(props.order.title)}</p>
+          <p>{concate(props.order.title, 20)}</p>
         </div>
 
         <div className="price-remove">
           <div>
-            {props.order.count}×{priceSymbol(props.order.price)}
+            {priceSymbol(props.order.price)}x{props.order.count}
           </div>
           <DeleteIcon
             className="deleteIcon"

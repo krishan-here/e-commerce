@@ -1,6 +1,6 @@
 const headphone = [
   {
-    _id: 1,
+    _id: "head_1",
     title:
       "boAt Rockerz 550 Over-Ear Wireless Headphone with Ergonomic Aesthetics, Plush Padded Earcups",
     price: 500,
@@ -9,7 +9,7 @@ const headphone = [
     rating: "",
   },
   {
-    _id: 2,
+    _id: "head_2",
     title: "Boult Audio Bass Buds Q2 Over-Ear Wired Lightweight",
     price: 50,
     image:
@@ -17,7 +17,7 @@ const headphone = [
     rating: "",
   },
   {
-    _id: 3,
+    _id: "head_3",
     title: "boAt Bassheads 900 On Ear Wired Headphones(Carbon Black)",
     price: 100,
     image:
@@ -25,7 +25,7 @@ const headphone = [
     rating: "",
   },
   {
-    _id: 4,
+    _id: "head_4",
     title: "boAt Bassheads 100 in Ear Wired Earphones with Mic(Black)",
     price: 250,
     image:
@@ -33,7 +33,7 @@ const headphone = [
     rating: "",
   },
   {
-    _id: 5,
+    _id: "head_5",
     title:
       "pTron Studio Over-Ear Bluetooth 5.0 Wireless Headphones, Hi-Fi Sound with Deep Bass",
     price: 40,
@@ -42,7 +42,7 @@ const headphone = [
     rating: "",
   },
   {
-    _id: 6,
+    _id: "head_6",
     title: "pTron Studio Over-Ear Bluetooth 5.0 Wireless",
     price: 200,
     image:
@@ -50,7 +50,7 @@ const headphone = [
     rating: "",
   },
   {
-    _id: 7,
+    _id: "head_7",
     title: "Spirili P-47 Portable Wireless Headphone with Bluetooth",
     price: 300,
     image:

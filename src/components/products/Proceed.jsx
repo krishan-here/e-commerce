@@ -13,7 +13,7 @@ function Proceed(props) {
     content = (
       <div className="proceed">
         <div>
-          <h4>{priceSymbol(totalPrice)}</h4>
+          <h4>Total: {priceSymbol(totalPrice)}</h4>
         </div>
         <button className="btn btn-primary">Proceed</button>
       </div>

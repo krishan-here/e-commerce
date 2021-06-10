@@ -1,6 +1,6 @@
-function concate(title) {
-  if (title.length > 50) {
-    return title.substr(0, 50) + "...";
+function concate(title, num) {
+  if (title.length > num) {
+    return title.substr(0, num) + "...";
   }
   return title;
 }
