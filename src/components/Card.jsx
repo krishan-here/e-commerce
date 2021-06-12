@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Headphone from "./products/Headphone";
 import Computer from "./products/Computer";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import Mobile from "./products/Mobile";
 
 function Card(props) {
   return (
@@ -31,7 +32,17 @@ function Card(props) {
             <div className="custom-card mobile-card">
               <div className="show">
                 <div>Mobile</div>
-                <button className="btn btn-lg btn-warning">Shop</button>
+                <Link to="/mobile">
+                  <button
+                    className="btn btn-warning"
+                    onClick={props.showProduct}
+                  >
+                    <div>Shop</div>
+                    <div className="arrow">
+                      <ArrowForwardIcon />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -61,6 +72,9 @@ function Card(props) {
           </Route>
           <Route path="/computer">
             <Computer />
+          </Route>
+          <Route path="/mobile">
+            <Mobile />
           </Route>
         </Switch>
       )}

@@ -185,6 +185,7 @@ a:hover{
     justify-content: center;
 }
 .card .img img{
+    object-fit: contain;
     max-height: 250px;
     max-width: 250px;
 }
@@ -214,6 +215,7 @@ a:hover{
 .order-img img{
     max-width: 100px;
     max-height: 100px;
+    object-fit: contain;
 }
 
 .price-remove{
@@ -232,8 +234,7 @@ a:hover{
 .proceed{
     padding: 2%;
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: space-between;
     align-items: baseline;
     margin-top: 20px;
 }

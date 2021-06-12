@@ -48,7 +48,7 @@ function Feature() {
           <div className="row">
             <div className="col-8">
               <div className="trend-img">
-                <img src="https://m.media-amazon.com/images/I/51yC6vz9TYL._AC_UY327_FMwebp_QL65_.jpg" />
+                <img src="https://m.media-amazon.com/images/I/714Mg+6MoFL._AC_UY327_FMwebp_QL65_.jpg" />
               </div>
             </div>
             <div className="col-4">
