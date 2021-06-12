@@ -1,4 +1,8 @@
 import React from "react";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function Feature() {
   return (
@@ -9,25 +13,52 @@ function Feature() {
     >
       <div className="carousel-inner">
         <div className="carousel-item active feature">
-          <img
-            className="d-block w-100"
-            src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/PC/Mayactivation/Accessoriesday1/D23140543_IN_CEPC_Electronicsaccessories_underRs999_3000x1200._CB669031984_.jpg"
-            alt="First slide"
-          />
+          <div className="row">
+            <div className="col-8">
+              <div className="trend-img">
+                <img src="https://m.media-amazon.com/images/I/71L2iBSyyOL._AC_UL480_FMwebp_QL65_.jpg" />
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="new-arrival">
+                <h4>#lappy</h4>
+                <h3>MacBook pro 8</h3>
+                <button className="btn btn-lg btn-warning">Shop Now</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="carousel-item feature">
-          <img
-            className="d-block w-100"
-            src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Avatar/HeroPC_3000x1200_SVA._CB667240774_.jpg"
-            alt="Second slide"
-          />
+          <div className="row">
+            <div className="col-8">
+              <div className="trend-img">
+                <img src="https://m.media-amazon.com/images/I/61kFG31YCsL._AC_UY327_FMwebp_QL65_.jpg" />
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="new-arrival">
+                <h4>#handFree</h4>
+                <h3>Boat ultra X</h3>
+                <button className="btn btn-lg btn-warning">Shop Now</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="carousel-item feature">
-          <img
-            className="d-block w-100"
-            src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/June/PPP/PPP_Ingress.jpg"
-            alt="Third slide"
-          />
+          <div className="row">
+            <div className="col-8">
+              <div className="trend-img">
+                <img src="https://m.media-amazon.com/images/I/51yC6vz9TYL._AC_UY327_FMwebp_QL65_.jpg" />
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="new-arrival">
+                <h4>#Mobo</h4>
+                <h3>Apple ultra pro 9</h3>
+                <button className="btn btn-lg btn-warning">Shop Now</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <a
@@ -36,7 +67,9 @@ function Feature() {
         role="button"
         data-slide="prev"
       >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span aria-hidden="true">
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </span>
         <span className="sr-only">Previous</span>
       </a>
       <a
@@ -45,7 +78,10 @@ function Feature() {
         role="button"
         data-slide="next"
       >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span aria-hidden="true">
+          <FontAwesomeIcon icon={faArrowRight} />
+        </span>
+
         <span className="sr-only">Next</span>
       </a>
     </div>
