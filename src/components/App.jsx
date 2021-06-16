@@ -16,7 +16,9 @@ function App() {
   return (
     <>
       <Header goHome={goHome} />
-      {showFeature && <Feature />}
+      {/* {showFeature && (
+        <Feature handleFeatures={handleChange} showFeatures={showFeature} />
+      )} */}
       <Card showProduct={handleChange} showCards={showFeature} />
     </>
   );

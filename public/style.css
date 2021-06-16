@@ -4,9 +4,14 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+:root{
+    --bgYellow: rgb(255, 193, 7);
+}
 body{
     overflow-x: hidden;
+    background-color: rgba(223, 221, 221, 0.459);
 }
+
 a{
     color: #fff;
 }
@@ -19,16 +24,21 @@ a:hover{
 
 .custom-header{
     width: 100vw;
-    padding: 0 5%;
+    padding: 5px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: xx-large;
-    background-color: black;
+    background-color: rgba(23, 22, 22, 0.7);
+    backdrop-filter: blur(10px);
     color: #fff;
 }
 .amezo{
     cursor: pointer;
+    background-image: url("./image/icon.png");
+    background-size: contain;
+    width: 50px;
+    height: 50px;
 }
 .user-info{
     font-size:medium;
@@ -37,28 +47,12 @@ a:hover{
     align-items: center;
 
 }
-.cart{
-    font-size: xx-large;
-    position: relative;
-}
-.cart-items{
-    width: 20px;
-    height: 20px;
-    background-color: rgb(255, 196, 0);
-    border-radius: 50%;
-    position: absolute;
-    top: 25px;
-    left: 18px;
-    font-size:small;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 /* feature */
 .feature{
     height: 80vh;
-    background-color: rgb(73, 69, 69);
+    background-color: rgba(124, 122 ,122, 0.88);
     color: #fff;
     padding: 5% 10%;
 }
@@ -85,9 +79,23 @@ a:hover{
     padding: 5% 10px;
 }
 
-
 /* card section */
 
+.card-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+.card-head h3{
+    border-radius: 30px 30px 0px 30px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bolder;
+    border-bottom: 2px double white;
+    color: white;
+    background-color: var(--bgYellow);
+    padding: 1% 2%;
+}
 .card-section{
     padding: 5%;
     overflow-x: hidden;
@@ -95,9 +103,11 @@ a:hover{
 
 .custom-card{
     margin: 5%;
-    background-color: rgb(247, 242, 145);
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
+    box-sizing: unset;
+    border: 25px solid var(--bgYellow);
+    border-radius: 30px 30px 0px;
     box-shadow: 0px 4px 9px 0px #5d5a5a;
     background-repeat: no-repeat;
     background-size: contain;
@@ -119,18 +129,24 @@ a:hover{
     backdrop-filter: blur(10px);
     width: 300px;
     height: 350px;
-    font-size: xx-large;
     font-weight: 700;
+    font-size: xx-large;
     color: rgb(124, 120, 120);
     display: grid;
     place-content: center;
     text-transform: uppercase;
     opacity: 0;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    border-radius: 30px 30px 0px;
 }
 
 .show button{
     position: absolute;
     bottom: 30px;
+    font-weight: 700;
+    color: #fff;
     left: 0;
     right: 0;
     margin-left: auto; 
@@ -140,20 +156,23 @@ a:hover{
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
 .show button:hover{
-    background-color: rgb(245, 222, 16);
+    background-color: var(--bgYellow);
     transition: ease-out all 0.5s;
     width: 133px;
+    color: #fff;
 }
 
 .show button:hover .arrow{
     opacity: 1;
+    display: unset;
     transition: ease-out all 0.5s;
     right: 0;
+    color: black;
 }
 .arrow{
     width: fit-content;
@@ -163,6 +182,7 @@ a:hover{
     box-sizing: unset;
     border-radius: 50%;
     opacity: 0;
+    display: none;
     position: relative;
     right: 30px;
 }
@@ -193,6 +213,10 @@ a:hover{
     height: 100px;
 }
 
+.card-title:hover{
+    cursor: pointer;
+    color: var(--bgYellow);
+}
 .price-cart{
     display: flex;
     justify-content: space-around;
@@ -205,6 +229,7 @@ a:hover{
 /* order-section  */
 
 .order-section{
+    background-color: #fff;
     display: flex;
     border: 1px solid gray;
     border-radius: 10px;
@@ -224,7 +249,7 @@ a:hover{
     align-items: center;
 }
 .deleteIcon{
-    color:rgb(255, 196, 0);
+    color:var(--bgYellow);
     cursor: pointer;
 }
 .deleteIcon:hover{
@@ -237,4 +262,33 @@ a:hover{
     justify-content: space-between;
     align-items: baseline;
     margin-top: 20px;
+}
+.cart-head{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.356);
+}
+
+/* fullview  */
+
+.full-view{
+    line-height: 1.4;
+    width: 100%;
+    min-height: 100%;
+    padding: 2%;
+}
+
+.full-img{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.full-img img{
+    object-fit: contain;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.full-detail{
+    display: grid;
+    row-gap: 20px;
 }

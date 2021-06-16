@@ -1,20 +1,31 @@
 import React, { useState } from "react";
 import items from "../productsData/headphone";
-import Item from "./Item";
-import Proceed from "./Proceed";
+import Item from "./essentials/Item";
+import Proceed from "./essentials/Proceed";
+import { Fade } from "react-awesome-reveal";
+import Fullview from "./essentials/Fullview";
+import { Zoom } from "react-awesome-reveal";
+import Modal from "react-modal";
 
 function Headphone() {
+  const [detail, setDetail] = useState({ isShow: false, show: null });
   const [orders, setOrders] = useState(
     JSON.parse(localStorage.getItem("orders"))
       ? JSON.parse(localStorage.getItem("orders"))
       : []
   );
 
+  function showDetail(item) {
+    setDetail({ isShow: true, show: item });
+  }
+  function closeDetail() {
+    setDetail({ isShow: false, show: null });
+  }
   function addOrder(newOrder) {
     let isAlreadyPresent = false;
     let newOrders = [...orders];
     newOrders.forEach((order) => {
-      if (order.id == newOrder.id) {
+      if (order.id === newOrder.id) {
         //already present in the cart
         isAlreadyPresent = true;
         order.count++;
@@ -41,24 +52,36 @@ function Headphone() {
       <div className="row">
         <div className="col-9">
           <div className="row justify-content-around">
-            {items.map((item) => {
-              return (
-                <Item
-                  key={item._id}
-                  id={item._id}
-                  title={item.title}
-                  img={item.image}
-                  price={item.price}
-                  addItem={addOrder}
-                />
-              );
-            })}
+            <Fade
+              className="animate__animated animate__fadeInUp"
+              direction="up"
+              cascade
+              triggerOnce
+            >
+              {items.map((item) => {
+                return (
+                  <Item
+                    key={item._id}
+                    item={item}
+                    addItem={addOrder}
+                    showDetail={showDetail}
+                  />
+                );
+              })}
+            </Fade>
           </div>
         </div>
         <div className="col-3">
           <Proceed orders={orders} removeOrder={removeOrder} />
         </div>
       </div>
+      {detail.isShow && (
+        <Modal isOpen={true} onRequestClose={closeDetail}>
+          <Zoom triggerOnce className="animate__animated animate__zoomOut">
+            <Fullview item={detail.show} addItem={addOrder} />
+          </Zoom>
+        </Modal>
+      )}
     </div>
   );
 }

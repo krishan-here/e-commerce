@@ -22,6 +22,13 @@ function Proceed(props) {
 
   return (
     <div>
+      {props.orders.length === 0 ? (
+        <p className="cart-head">Cart is empty</p>
+      ) : props.orders.length === 1 ? (
+        <p className="cart-head">{props.orders.length} item in cart</p>
+      ) : (
+        <p className="cart-head">{props.orders.length} items in cart</p>
+      )}
       {props.orders.map((order) => {
         return (
           <Order key={order.id} order={order} removeOrder={props.removeOrder} />

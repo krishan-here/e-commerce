@@ -6,7 +6,7 @@ const headphone = [
     price: 500,
     image:
       "https://m.media-amazon.com/images/I/61ihz46SLOL._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐⭐⭐⭐",
   },
   {
     _id: "head_2",
@@ -14,7 +14,7 @@ const headphone = [
     price: 50,
     image:
       "https://m.media-amazon.com/images/I/710XhG8bO3L._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐⭐",
   },
   {
     _id: "head_3",
@@ -22,7 +22,7 @@ const headphone = [
     price: 100,
     image:
       "https://m.media-amazon.com/images/I/71rSu40EANL._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐",
   },
   {
     _id: "head_4",
@@ -30,7 +30,7 @@ const headphone = [
     price: 250,
     image:
       "https://m.media-amazon.com/images/I/61xeIT6UHrL._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐⭐",
   },
   {
     _id: "head_5",
@@ -39,7 +39,7 @@ const headphone = [
     price: 40,
     image:
       "https://m.media-amazon.com/images/I/719elVA3FvL._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐⭐⭐⭐",
   },
   {
     _id: "head_6",
@@ -47,7 +47,7 @@ const headphone = [
     price: 200,
     image:
       "https://m.media-amazon.com/images/I/51yC6vz9TYL._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐",
   },
   {
     _id: "head_7",
@@ -55,7 +55,7 @@ const headphone = [
     price: 300,
     image:
       "https://m.media-amazon.com/images/I/61kFG31YCsL._AC_UY327_FMwebp_QL65_.jpg",
-    rating: "",
+    rating: "⭐⭐⭐⭐⭐",
   },
 ];
 
