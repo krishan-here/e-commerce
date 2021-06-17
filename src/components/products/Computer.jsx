@@ -1,13 +1,28 @@
-import React, { useState } from "react";
-import items from "../productsData/computer";
+import React, { useEffect, useState } from "react";
 import Item from "./essentials/Item";
 import Proceed from "./essentials/Proceed";
 import { Fade } from "react-awesome-reveal";
 import Fullview from "./essentials/Fullview";
 import { Zoom } from "react-awesome-reveal";
 import Modal from "react-modal";
+import axios from "axios";
 
 function Computer() {
+  const [productData, getproductData] = useState([]);
+  const getAllProduct = () => {
+    axios
+      .get("http://localhost:8000/computer")
+      .then((response) => {
+        getproductData(response.data.products);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getAllProduct();
+  }, []);
+
   const [detail, setDetail] = useState({ isShow: false, show: null });
   const [orders, setOrders] = useState(
     JSON.parse(localStorage.getItem("orders"))
@@ -59,7 +74,7 @@ function Computer() {
               cascade
               triggerOnce
             >
-              {items.map((item) => {
+              {productData.map((item) => {
                 return (
                   <Item
                     key={item._id}
