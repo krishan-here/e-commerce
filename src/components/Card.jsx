@@ -7,7 +7,7 @@ import Mobile from "./products/Mobile";
 function Card(props) {
   return (
     <Router>
-      {props.showCards ? (
+      {!props.showCards.product ? (
         <>
           <div className="card-head">
             <h3>Our Products</h3>
@@ -20,10 +20,9 @@ function Card(props) {
                   <Link to="/computer">
                     <button
                       className="btn btn-warning"
-                      onClick={props.showProduct}
+                      onClick={() => props.showProduct()}
                     >
                       <div>Shop</div>
-                      <div className="arrow"></div>
                     </button>
                   </Link>
                 </div>
@@ -36,10 +35,9 @@ function Card(props) {
                   <Link to="/mobile">
                     <button
                       className="btn btn-warning"
-                      onClick={props.showProduct}
+                      onClick={() => props.showProduct()}
                     >
                       <div>Shop</div>
-                      <div className="arrow"></div>
                     </button>
                   </Link>
                 </div>
@@ -52,10 +50,9 @@ function Card(props) {
                   <Link to="/headphone">
                     <button
                       className="btn btn-warning"
-                      onClick={props.showProduct}
+                      onClick={() => props.showProduct()}
                     >
                       <div>Shop</div>
-                      <div className="arrow"></div>
                     </button>
                   </Link>
                 </div>
